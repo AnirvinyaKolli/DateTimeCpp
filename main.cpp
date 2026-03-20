@@ -22,11 +22,11 @@ int main(){
 
     //Time with offset
     int offset;
+    std::cout << "Enter offset: "<< std::endl; 
     std::cin >> offset;  
     now += offset*3600; 
     std::tm* pacificTime = std::gmtime(&now);
-
-    std::cout<<"Offset time: " << std::asctime(pacificTime) << "\n"; 
+    std::cout<<"Offset time: " << std::asctime(pacificTime); 
 
 
     // Calculate time to answer question
