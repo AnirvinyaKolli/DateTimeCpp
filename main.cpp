@@ -16,13 +16,12 @@ int main(){
 
     // //Current time formatted
     std::time_t now = std::time(nullptr); 
-    // std::cout << "Current Time: " << std::ctime(&now) << "\n"; 
+    std::cout << "Current Time: " << std::ctime(&now) << "\n"; 
 
-    // std::tm* utc_time = std::gmtime(&now); 
+    std::tm* utc_time = std::gmtime(&now); 
 
     //Time with offset
     int offset;
-    std::time_t now = std::time(nullptr); 
     std::cin >> offset;  
     now += offset*3600; 
     std::tm* pacificTime = std::gmtime(&now);
